@@ -1,48 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Phalcon REST Base by cmoore4</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Phalcon REST Base by le51</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/cmoore4/phalcon-rest">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/cmoore4/phalcon-rest/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/cmoore4/phalcon-rest/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <a id="forkme_banner" href="https://github.com/le51/phalcon-ember-rest">View on GitHub</a>
+    <div class="shell">
 
-    <div class="wrapper">
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Phalcon REST Base</h1>
+            <h2>Best Practices for APIs Using the Phalcon Framework</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-      <section>
-        <div id="title">
-          <h1>Phalcon REST Base</h1>
-          <p>Best Practices for APIs Using the Phalcon Framework</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/cmoore4">cmoore4</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/le51/phalcon-ember-rest/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/le51/phalcon-ember-rest/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
         <h1>
-<a name="phalconrest" class="anchor" href="#phalconrest"><span class="octicon octicon-link"></span></a>PhalconRest</h1>
+<a id="phalcon-ember-rest" class="anchor" href="#phalcon-ember-rest" aria-hidden="true"><span class="octicon octicon-link"></span></a>Phalcon Ember Rest</h1>
 
 <h2>
-<a name="a-base-project-for-apis-using-the-phalcon-framework" class="anchor" href="#a-base-project-for-apis-using-the-phalcon-framework"><span class="octicon octicon-link"></span></a>A base project for APIs using the <a href="http://phalconphp.com/index">Phalcon</a> framework</h2>
+<a id="a-base-project-for-apis-using-the-phalcon-framework" class="anchor" href="#a-base-project-for-apis-using-the-phalcon-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>A base project for APIs using the <a href="http://phalconphp.com/index">Phalcon</a> framework</h2>
 
 <p>The Phalcon framework is an awesome PHP framework that exists as a C-extension to the language.
 This allows it to be incredibly fast.  But aside from its quickness, it is an amazingly
@@ -67,7 +75,7 @@ authentication in a few ways, as well as a few tempaltes for implementing common
 I've tried to comment them extensively.</p>
 
 <h2>
-<a name="api-assumptions" class="anchor" href="#api-assumptions"><span class="octicon octicon-link"></span></a>API Assumptions</h2>
+<a id="api-assumptions" class="anchor" href="#api-assumptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Assumptions</h2>
 
 <p><strong>URL Structure</strong></p>
 
@@ -79,7 +87,7 @@ I've tried to comment them extensively.</p>
 <p>Request bodies will be submitted as valid JSON.</p>
 
 <h2>
-<a name="the-fields" class="anchor" href="#the-fields"><span class="octicon octicon-link"></span></a>The Fields</h2>
+<a id="the-fields" class="anchor" href="#the-fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Fields</h2>
 
 <p><strong>Search</strong></p>
 
@@ -124,7 +132,7 @@ responsible for checking the response body to ensure a valid response.</p>
 </blockquote>
 
 <h2>
-<a name="responses" class="anchor" href="#responses"><span class="octicon octicon-link"></span></a>Responses</h2>
+<a id="responses" class="anchor" href="#responses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responses</h2>
 
 <p>All route controllers must return an array.  This array is used to create the response object.</p>
 
@@ -172,7 +180,7 @@ Nala,"Pride Rock",Simba
 </code></pre>
 
 <h2>
-<a name="errors" class="anchor" href="#errors"><span class="octicon octicon-link"></span></a>Errors</h2>
+<a id="errors" class="anchor" href="#errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Errors</h2>
 
 <p>PhalconRest\Exception\HTTPException extends PHP's native exceptions.  Throwing this type of exception 
 returns a nicely formatted JSON response to the client.</p>
@@ -205,7 +213,7 @@ returns a nicely formatted JSON response to the client.</p>
 </code></pre>
 
 <h2>
-<a name="example-controller" class="anchor" href="#example-controller"><span class="octicon octicon-link"></span></a>Example Controller</h2>
+<a id="example-controller" class="anchor" href="#example-controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Controller</h2>
 
 <p>The Example Controller sets up a route at /example and implements all of the above query parameters.
 You can mix and match any of these queries:</p>
@@ -223,8 +231,20 @@ You can mix and match any of these queries:</p>
 </blockquote>
       </section>
 
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/le51">le51</a> can be found on <a href="https://github.com/le51/phalcon-ember-rest">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
   </body>
 </html>
